@@ -24,24 +24,67 @@ This project demonstrates hands-on experience with **federal-grade security cont
 
 ## 🛠️ Tools & Technologies
 
-- **Authentication**: YubiKey (FIDO2, PIV, OTP)
-- **Federal Environments**: GCC High, GCC, NSC
-- **Platforms**: Windows Server, VDI
-- **Identity & Access**: MFA, RBAC, SSO
-- **Automation**: PowerShell
-- **Security & Monitoring**: Secure logging, monitoring tools
-- **Compliance**: IL4/IL5, Zero Trust frameworks
+### **Security Stack**
+
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Technologies</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>🔑 Authentication</strong></td>
+<td>YubiKey (FIDO2, PIV, OTP)</td>
+<td>Hardware-based multi-factor authentication</td>
+</tr>
+<tr>
+<td><strong>🏛️ Federal Environments</strong></td>
+<td>GCC High<br>GCC<br>NSC</td>
+<td>Compliance-aligned cloud tenants</td>
+</tr>
+<tr>
+<td><strong>🖥️ Platforms</strong></td>
+<td>Windows Server<br>VDI</td>
+<td>Secure endpoint infrastructure</td>
+</tr>
+<tr>
+<td><strong>🔐 Identity & Access</strong></td>
+<td>MFA<br>RBAC<br>SSO</td>
+<td>Identity enforcement and access control</td>
+</tr>
+<tr>
+<td><strong>⚙️ Automation</strong></td>
+<td>PowerShell</td>
+<td>Security automation and troubleshooting</td>
+</tr>
+<tr>
+<td><strong>📊 Security & Monitoring</strong></td>
+<td>Secure logging<br>Monitoring tools</td>
+<td>Audit trails and security visibility</td>
+</tr>
+<tr>
+<td><strong>📋 Compliance</strong></td>
+<td>IL4/IL5<br>Zero Trust frameworks</td>
+<td>Federal security baselines</td>
+</tr>
+</tbody>
+</table>
 
 ---
 
 ## 🔐 Security Workflow Overview
 
-1. Validate user identity and MFA token (YubiKey)
-2. Authenticate through GCC/NSC or IL4/IL5-compliant access layers
-3. Enforce RBAC and Zero Trust policies
-4. Log and monitor authentication events
-5. Troubleshoot failures across VDI, ServiceNow, and cloud endpoints
-6. Document findings and escalate to security engineering when required
+| Step | Action | Security Layer |
+|------|--------|----------------|
+| **1** | Validate user identity and MFA token (YubiKey) | 🔑 Authentication |
+| **2** | Authenticate through GCC/NSC or IL4/IL5-compliant access layers | 🏛️ Federal Gateway |
+| **3** | Enforce RBAC and Zero Trust policies | 🔒 Policy Engine |
+| **4** | Log and monitor authentication events | 📊 Audit Layer |
+| **5** | Troubleshoot failures across VDI, ServiceNow, and cloud endpoints | 🔧 Support Operations |
+| **6** | Document findings and escalate to security engineering when required | 📝 Incident Management |
 
 ---
 
@@ -71,15 +114,85 @@ This project demonstrates hands-on experience with **federal-grade security cont
                 +---------------------------+
 ```
 
+### **Security Layers**
+
+| Layer | Components | Function |
+|-------|------------|----------|
+| 🏛️ **Federal Access** | IL4/IL5, GCC High, NSC | Compliance-aligned access gateway |
+| 🔑 **Identity & MFA** | YubiKey, SSO, RBAC | Multi-factor authentication and authorization |
+| 🖥️ **Endpoint Systems** | VDI, ServiceNow, Windows | Secure workstations and enterprise platforms |
+| 📊 **Audit & Compliance** | Logging, Monitoring | Security event tracking and compliance reporting |
+
+---
+
+## 🔐 Compliance Framework Alignment
+
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Level</th>
+<th>Controls Implemented</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Impact Level 4 (IL4)</strong></td>
+<td>🟡 Moderate</td>
+<td>MFA, RBAC, Endpoint Hardening, Audit Logging</td>
+</tr>
+<tr>
+<td><strong>Impact Level 5 (IL5)</strong></td>
+<td>🔴 High</td>
+<td>Hardware MFA (YubiKey), Zero Trust, Enhanced Monitoring</td>
+</tr>
+<tr>
+<td><strong>GCC High</strong></td>
+<td>🟢 DoD</td>
+<td>FedRAMP High, ITAR compliance, Secure tenant isolation</td>
+</tr>
+<tr>
+<td><strong>Zero Trust</strong></td>
+<td>🔵 Modern</td>
+<td>Continuous verification, Least privilege, Micro-segmentation</td>
+</tr>
+</tbody>
+</table>
+
 ---
 
 ## ✅ Key Outcomes
 
-- Strengthened authentication reliability across secure federal environments
-- Reduced access failures through structured troubleshooting workflows
-- Improved compliance alignment for IL4/IL5 workloads
-- Enhanced Zero Trust enforcement across VDI and cloud systems
-- Supported mission-critical operations requiring high-assurance identity controls
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>🔒 Authentication</strong></td>
+<td>Strengthened authentication reliability across secure federal environments</td>
+</tr>
+<tr>
+<td><strong>🔧 Operations</strong></td>
+<td>Reduced access failures through structured troubleshooting workflows</td>
+</tr>
+<tr>
+<td><strong>📋 Compliance</strong></td>
+<td>Improved compliance alignment for IL4/IL5 workloads</td>
+</tr>
+<tr>
+<td><strong>🛡️ Zero Trust</strong></td>
+<td>Enhanced Zero Trust enforcement across VDI and cloud systems</td>
+</tr>
+<tr>
+<td><strong>🎯 Mission Support</strong></td>
+<td>Supported mission-critical operations requiring high-assurance identity controls</td>
+</tr>
+</tbody>
+</table>
 
 ---
 
