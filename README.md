@@ -117,7 +117,7 @@ This project demonstrates hands-on experience with **federal-grade security cont
 
 ### 📷 Visual Architecture Diagram (PNG)
 
-![IL4/IL5 Secure Access]([Color-coded_IL4-IL5.png](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/))
+![IL4/IL5 Secure Access](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/Color-coded_IL4-IL5.png?raw=true)
 
 ---
 
