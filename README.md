@@ -121,6 +121,12 @@ This project demonstrates hands-on experience with **federal-grade security cont
 
 ---
 
+## 🧠 System Summary
+
+This system secures access to IL4/IL5 and GCC/NSC federal environments by enforcing device compliance, hardware‑based MFA, privileged access controls, and continuous monitoring. Through Intune/Jamf enrollment, YubiKey authentication, Zero Trust policy enforcement, and secure gateways such as Zscaler, GlobalProtect, and Citrix, only verified users on compliant endpoints can reach isolated federal enclaves. All access events are logged and monitored to maintain audit readiness and alignment with federal security baselines.
+
+---
+
 ### **Security Layers**
 
 | Layer | Components | Function |
