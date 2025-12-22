@@ -125,6 +125,53 @@ This project demonstrates hands-on experience with **federal-grade security cont
 
 ---
 
+## 🗂️ Repository Structure
+
+A high-level map of the Federal Security Support repository:
+```
+Federal-Security-Support/
+│
+├── doc/
+│   ├── architecture_overview.md       # Weekend support architecture (sanitized)
+│   └── confidentiality_note.md        # NDA-aligned disclaimer
+│
+├── scripts/
+│   ├── il4_weekend_support_log.sql    # Audit log analysis (sanitized)
+│   └── yubikey_compliance_check.ps1   # Endpoint MFA compliance check (sanitized)
+│
+├── Color-coded_IL4-IL5.png            # Visual architecture diagram
+└── README.md                          # Main project documentation
+```
+
+---
+
+### 📷 Visual Architecture Diagram (PNG)
+
+![IL4/IL5 Secure Access]([EGSE_Architecture.png](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/Color-coded_IL4-IL5.png))
+
+---
+
+## 📁 Key Files & Resources
+
+| File | Description | Link |
+|------|-------------|------|
+| **Architecture Overview** | Weekend support architecture (sanitized) | [View](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/doc/architecture_overview.md) |
+| **Confidentiality Note** | NDA-aligned disclaimer | [View](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/doc/confidentiality_note.md) |
+| **YubiKey Compliance Check** | Endpoint MFA compliance validation script | [View](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/scripts/yubikey_compliance_check.ps1) |
+| **IL4 Weekend Support Log** | Audit log analysis query (sanitized) | [View](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/scripts/il4_weekend_support_log.sql) |
+| **Architecture Diagram** | Color-coded IL4/IL5 visual | `Color-coded_IL4-IL5.png` |
+
+---
+
+## 🔗 Quick Navigation
+
+- 📖 [Documentation](https://github.com/Suren-Jewels/Federal-Security-Support/tree/main/doc)
+- 💻 [Scripts & Automation](https://github.com/Suren-Jewels/Federal-Security-Support/tree/main/scripts)
+- 🏗️ [Architecture Overview](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/doc/architecture_overview.md)
+- 🔒 [Confidentiality & Compliance](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/doc/confidentiality_note.md)
+
+---
+
 ## 🔐 Compliance Framework Alignment
 
 <table>
