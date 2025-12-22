@@ -147,7 +147,7 @@ Federal-Security-Support/
 
 ### 📷 Visual Architecture Diagram (PNG)
 
-![IL4/IL5 Secure Access]([EGSE_Architecture.png](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/Color-coded_IL4-IL5.png))
+![IL4/IL5 Secure Access]([Color-coded_IL4-IL5.png](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/))
 
 ---
 
