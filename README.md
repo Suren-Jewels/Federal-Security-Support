@@ -117,6 +117,17 @@ By resolving access failures, validating compliance, and supporting secure weeke
 
 ---
 
+## 🚀 Key Achievements
+
+| Metric | Achievement | Impact |
+|--------|-------------|--------|
+| 🔐 Zero Trust Alignment | Implemented IL4/IL5‑aligned authentication workflows | Strengthened compliance and reduced security gaps |
+| 🛡️ Security Posture | Built enclave‑ready access and validation scripts | Improved audit readiness and reduced misconfigurations |
+| 📊 Operational Insight | Created metrics for authentication, posture, and access | Enabled proactive monitoring and compliance reporting |
+| ⚙️ Workflow Standardization | Documented repeatable federal‑aligned procedures | Improved consistency across secure environments |
+
+---
+
 ## 🧩 Architecture Overview (Sanitized)
 ```
 +-----------------------------------------------------------+
