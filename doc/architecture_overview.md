@@ -1,15 +1,67 @@
-# 🧱 Federal Support Architecture Overview
+# Architecture Summary
 
-This document provides a high‑level overview of the IL4/IL5 Secure Access Architecture used to support federal environments, including ServiceNow Federal, GCC/NSC tenants, and isolated IL4/IL5 enclaves. It outlines the layered controls that govern device compliance, identity verification, privileged access, and continuous monitoring across secure federal systems.
+This document provides a high-level overview of the architecture supporting IL4/IL5-aligned authentication, access control, and security workflows in federal environments. All information is fully sanitized and focuses on conceptual structure rather than proprietary implementation details.
 
-The architecture includes the following core components: IL4/IL5 enclave, Intune and Jamf MDM, MFA and PAM identity controls, VPN and Zero Trust gateways, FedRAMP‑aligned compliance controls, and an endpoint security stack. These elements work together to ensure that only verified users on compliant devices can access sensitive federal workloads.
+---
 
-The access flow follows a structured sequence:
-  1. Device enrollment through Intune or Jamf
-  2. Compliance validation against FedRAMP controls
-  3. Authentication using MFA and PAM
-  4. Secure access into the IL4/IL5 enclave
-  5. Continuous monitoring through SIEM and endpoint security tools
+## 🧱 Core Architectural Components
 
-All internal topology, sensitive configurations, and operational details have been intentionally omitted to comply with federal confidentiality requirements
+### **Identity & Access Layer**
+Zero Trust-aligned authentication workflows, MFA enforcement, and RBAC across secure enclaves.
 
+### **Endpoint Security Layer**
+- Device posture validation  
+- Disk encryption  
+- Endpoint protection  
+- Compliance enforcement  
+
+### **Network Segmentation Layer**
+- IL4/IL5 enclave boundaries  
+- Controlled routing  
+- Firewall enforcement  
+- Secure remote access  
+
+### **Automation Layer**
+Scripts and tooling for posture checks, access validation, and compliance reporting.
+
+### **Monitoring Layer**
+- Authentication logs  
+- Posture metrics  
+- Access audit trails  
+
+---
+
+## 🔄 Architecture Flow (High-Level)
+🛡️ Federal — Zero Trust Access Architecture
+
+### Components
+• Identity provider  
+• Posture validation engine  
+• Secure enclave gateways  
+• Access control scripts  
+• Monitoring and audit stack  
+
+### Flow
+1. User authenticates with MFA  
+2. Device posture is validated  
+3. Access request is evaluated against enclave policies  
+4. Session is established with continuous verification  
+5. Logs feed into compliance and audit systems  
+
+---
+
+## 🧩 Architectural Intent
+
+The architecture is designed to ensure:
+
+- IL4/IL5-compliant access control  
+- Continuous verification of identity and device posture  
+- Reduced risk of unauthorized access  
+- Rapid troubleshooting and audit readiness  
+- Alignment with federal Zero Trust frameworks  
+
+---
+
+## 🔒 Confidentiality Notice
+
+Detailed diagrams, enclave topology, and proprietary security configurations are intentionally omitted to maintain confidentiality. This summary reflects only high-level architectural concepts.
