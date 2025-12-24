@@ -181,7 +181,7 @@ By resolving access failures, validating compliance, and supporting secure weeke
 
 ## 🚀 Deployment Workflow
 
-**Pipeline:** [CI] → [CD] → [Prod]
+**Pipeline:** *[CI] → [CD] → [Prod]*
 | Step | Action | Tools Used |
 |------|--------|------------|
 | **1** | Provision Linux and Windows hosts across IL4/IL5‑aligned secure enclaves | Bash, PowerShell |
