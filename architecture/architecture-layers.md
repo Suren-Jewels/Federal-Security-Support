@@ -1,4 +1,4 @@
-# 🧩 Federal Architecture Layers  
+# 📚 Federal Architecture Layers  
 Layered breakdown of the Federal automation and orchestration system.
 
 ---
@@ -42,6 +42,17 @@ This document describes the layered architecture used in the Federal automation 
 - API connectors  
 - External system adapters  
 - Secure communication channels  
+
+---
+
+## 🧩 Architecture Layers
+
+| Layer | Components | Function |
+|-------|------------|----------|
+| 🏛️ Federal Access Layer | IL4/IL5, GCC High, NSC | Provides compliance‑aligned access control for restricted federal environments |
+| 🔑 Identity & MFA Layer | YubiKey, SSO, RBAC | Enforces strong authentication, identity assurance, and least‑privilege authorization |
+| 🖥️ Endpoint & Platform Layer | VDI, ServiceNow, Windows | Delivers secure workstations and enterprise platforms within controlled enclaves |
+| 📊 Audit & Compliance Layer | Logging, Monitoring | Ensures traceability, audit readiness, and continuous compliance reporting |
 
 ---
 
