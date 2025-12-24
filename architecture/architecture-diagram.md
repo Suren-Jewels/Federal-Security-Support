@@ -1,6 +1,6 @@
 # 🗺️ Federal Architecture Diagram
 
-ASCII-based high-level architecture diagram for the Federal automation platform.
+High-level architecture diagram for the Federal authentication, access control, and automation platform.
 
 ---
 
@@ -14,23 +14,25 @@ ASCII-based high-level architecture diagram for the Federal automation platform.
                ▼
 ┌───────────────────────────────┐
 │      Control Plane            │
-│  Orchestration & Policy       │
+│ Orchestration • Policy Engine │
+│ SNCA Routing (v2/v3/legacy)   │
 └──────────────┬────────────────┘
                │
                ▼
 ┌───────────────────────────────┐
 │      Execution Layer          │
-│  Automation & Validation      │
+│ Automation • Validation       │
+│ Posture Checks • MFA Logic    │
 └──────────────┬────────────────┘
                │
        ┌───────┴───────┐
        │               │
        ▼               ▼
 ┌──────────────┐  ┌──────────────┐
-│Configuration │  │  Data Layer  │
-│   Layer      │  │ Logs / State │
-│ Baselines &  │  │  / Audit     │
-│  Profiles    │  │              │
+│Configuration │  │   Data Layer │
+│   Layer      │  │ Logs • State │
+│ Baselines &  │  │ Audit Trails │
+│  Profiles    │  │ Compliance   │
 └──────┬───────┘  └──────┬───────┘
        │                 │
        └────────┬────────┘
@@ -38,53 +40,74 @@ ASCII-based high-level architecture diagram for the Federal automation platform.
                 ▼
 ┌───────────────────────────────┐
 │    Integration Layer          │
-│  External Systems & APIs      │
+│ SNCA • YubiKey Repo • APIs    │
 └───────────────────────────────┘
 ```
 
 ### Layer Descriptions
 
-- **Presentation Layer**: User interfaces including CLI tools, operator consoles, and web UIs
-- **Control Plane**: Orchestration engine and policy enforcement mechanisms
-- **Execution Layer**: Automation workflows and validation processes
-- **Configuration Layer**: Security baselines, compliance profiles, and configuration templates
-- **Data Layer**: Centralized logging, state management, and audit trail storage
-- **Integration Layer**: Connectors to external systems and third-party APIs
+**Presentation Layer**  
+CLI tools, operator consoles, and UI dashboards for access requests and posture visibility
+
+**Control Plane**  
+Orchestration engine, Zero Trust policy enforcement, and SNCA version routing (v2/v3/legacy)
+
+**Execution Layer**  
+Automation workflows, posture validation, MFA logic, and access evaluation
+
+**Configuration Layer**  
+Security baselines, SNCA parameters, compliance profiles, and environment templates
+
+**Data Layer**  
+Centralized logging, posture metrics, state management, and IL4/IL5 audit trail storage
+
+**Integration Layer**  
+SNCA identity provider, YubiKey Enrollment & Policy Toolkit, external APIs, and secure connectors
 
 ---
 
 ## Federal Access Architecture
 ```
-┌─────────────────────────────────────────────────────────┐
-│              Federal Access Layer                       │
-│     IL4 • IL5 • GCC High • NSC • Zero Trust            │
-└────────────────────────┬────────────────────────────────┘
-                         │
-                         ▼
-              ┌──────────────────────┐
-              │ Identity & MFA Layer │
-              │ YubiKey • SSO • RBAC │
-              └──────────┬───────────┘
-                         │
-                         ▼
-              ┌──────────────────────┐
-              │ VDI / Cloud Systems  │
-              │ Windows • ServiceNow │
-              └──────────┬───────────┘
-                         │
-                         ▼
-              ┌──────────────────────┐
-              │ Logging & Compliance │
-              │ Audit • Monitoring   │
-              └──────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│                 Federal Access Layer                          │
+│ IL4 • IL5 • GCC High • NSC • Zero Trust • SNCA v2/v3/legacy   │
+└───────────────────────────┬────────────────────────────────────┘
+                            │
+                            ▼
+┌────────────────────────────────┐
+│      Identity & MFA Layer      │
+│ YubiKey PIV • SSO • RBAC       │
+│ SNCA v2/v3/legacy Integration  │
+└──────────────┬─────────────────┘
+               │
+               ▼
+┌────────────────────────────────┐
+│     VDI / Cloud Systems        │
+│ Windows • ServiceNow • Enclaves│
+│ Posture Validation Engine      │
+└──────────────┬─────────────────┘
+               │
+               ▼
+┌────────────────────────────────┐
+│     Logging & Compliance       │
+│ Audit • Monitoring • Metrics   │
+│ IL4/IL5 Reporting Pipelines    │
+└────────────────────────────────┘
 ```
 
 ### Security Controls
 
-- **Federal Access Layer**: Multi-level security controls across IL4, IL5, GCC High, and NSC environments
-- **Identity & MFA**: Hardware token authentication (YubiKey), Single Sign-On, and Role-Based Access Control
-- **VDI / Cloud Systems**: Secure virtual desktop infrastructure and integrated cloud platforms
-- **Logging & Compliance**: Comprehensive audit logging and continuous compliance monitoring
+**Federal Access Layer**  
+Multi-level access enforcement across IL4, IL5, GCC High, and NSC environments with SNCA version routing
+
+**Identity & MFA**  
+YubiKey PIV hardware-backed MFA, SSO, RBAC, and identity assurance
+
+**VDI / Cloud Systems**  
+Secure VDI, enclave access, posture validation, and enterprise platform integration
+
+**Logging & Compliance**  
+Continuous monitoring, audit trails, posture metrics, and IL4/IL5 compliance reporting
 
 ---
 
@@ -100,22 +123,24 @@ ASCII-based high-level architecture diagram for the Federal automation platform.
 
 - Arrows represent directional data and control flow between layers
 - Layers are isolated but interoperable through defined interfaces
-- All identifiers and system names are sanitized for public documentation
-- Diagrams reflect conceptual architecture, not physical network topology
-- Architecture follows Zero Trust principles with defense-in-depth
+- SNCA v2/v3/legacy routing is abstracted for security
+- YubiKey integration is conceptual and sanitized
+- Architecture reflects Zero Trust principles and defense-in-depth
+- Diagram is conceptual, not a physical network topology
 
 ---
 
 ## Revision History
 
-| Version | Date       | Description                              |
-|---------|------------|------------------------------------------|
-| 1.0     | 2024-12-24 | Initial sanitized architecture diagram   |
+| Version | Date       | Description                                           |
+|---------|------------|-------------------------------------------------------|
+| 1.1     | 2024-12-24 | Added SNCA v2/v3/legacy, YubiKey, posture updates     |
+| 1.0     | 2024-12-24 | Initial sanitized architecture diagram                |
 
 ---
 
 ## Additional Resources
 
-- For implementation details, refer to internal security documentation
-- Contact the architecture team for environment-specific configurations
-- Review compliance requirements for your target impact level (IL4/IL5)
+- Refer to internal documentation for environment-specific SNCA mappings
+- Review IL4/IL5 compliance requirements for enclave access
+- See the YubiKey repo for enrollment and policy enforcement workflows
