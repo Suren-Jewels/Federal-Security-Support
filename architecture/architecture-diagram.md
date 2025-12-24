@@ -95,6 +95,14 @@ SNCA identity provider, YubiKey Enrollment & Policy Toolkit, external APIs, and 
             └────────────────────────────────┘
 ```
 
+## Visual Reference 1
+
+![Federal Zero Trust Access Architecture](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/architecture/Federal_Zero_Trust_Access_Architecture.png?raw=true)
+
+*Visual representation of the Federal Zero Trust access architecture, including IL4/IL5 segmentation, SNCA v2/v3 routing, YubiKey-backed MFA, posture validation, and enclave access workflows.*
+
+---
+
 ### Security Controls
 
 **Federal Access Layer**  
@@ -111,7 +119,7 @@ Continuous monitoring, audit trails, posture metrics, and IL4/IL5 compliance rep
 
 ---
 
-## Visual Reference
+## Visual Reference 2
 
 ![IL4/IL5 Secure Access Architecture](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/Color-coded_IL4-IL5.png?raw=true)
 
