@@ -1,0 +1,20 @@
+{
+  "sncaVersion": "v3",
+  "identityProviders": {
+    "v3": "https://idp-gcchigh.example",
+    "v2": "https://idp-nsc.example",
+    "legacy": "https://idp-external.example"
+  },
+  "mfa": {
+    "method": "YubiKey-PIV",
+    "assuranceLevel": "high"
+  },
+  "rbac": {
+    "roleAttribute": "federalRole",
+    "allowedRoles": [
+      "IL4-Operator",
+      "IL5-Operator",
+      "Security-Engineer"
+    ]
+  }
+}
