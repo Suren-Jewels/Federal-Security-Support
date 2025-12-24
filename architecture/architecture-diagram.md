@@ -38,10 +38,10 @@ High-level architecture diagram for the Federal authentication, access control, 
        └────────┬────────┘
                 │
                 ▼
-┌───────────────────────────────┐
-│    Integration Layer          │
-│ SNCA • YubiKey Repo • APIs    │
-└───────────────────────────────┘
+  ┌───────────────────────────────┐
+  │    Integration Layer          │
+  │ SNCA • YubiKey Repo • APIs    │
+  └───────────────────────────────┘
 ```
 
 ### Layer Descriptions
@@ -69,30 +69,30 @@ SNCA identity provider, YubiKey Enrollment & Policy Toolkit, external APIs, and 
 ## Federal Access Architecture
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│                 Federal Access Layer                          │
-│ IL4 • IL5 • GCC High • NSC • Zero Trust • SNCA v2/v3/legacy   │
-└───────────────────────────┬────────────────────────────────────┘
+│                 Federal Access Layer                         │
+│ IL4 • IL5 • GCC High • NSC • Zero Trust • SNCA v2/v3/legacy  │
+└───────────────────────────┬──────────────────────────────────┘
                             │
                             ▼
-┌────────────────────────────────┐
-│      Identity & MFA Layer      │
-│ YubiKey PIV • SSO • RBAC       │
-│ SNCA v2/v3/legacy Integration  │
-└──────────────┬─────────────────┘
-               │
-               ▼
-┌────────────────────────────────┐
-│     VDI / Cloud Systems        │
-│ Windows • ServiceNow • Enclaves│
-│ Posture Validation Engine      │
-└──────────────┬─────────────────┘
-               │
-               ▼
-┌────────────────────────────────┐
-│     Logging & Compliance       │
-│ Audit • Monitoring • Metrics   │
-│ IL4/IL5 Reporting Pipelines    │
-└────────────────────────────────┘
+            ┌────────────────────────────────┐
+            │      Identity & MFA Layer      │
+            │ YubiKey PIV • SSO • RBAC       │
+            │ SNCA v2/v3/legacy Integration  │
+            └──────────────┬─────────────────┘
+                           │
+                           ▼
+            ┌────────────────────────────────┐
+            │     VDI / Cloud Systems        │
+            │ Windows • ServiceNow • Enclaves│
+            │ Posture Validation Engine      │
+            └──────────────┬─────────────────┘
+                           │
+                           ▼
+            ┌────────────────────────────────┐
+            │     Logging & Compliance       │
+            │ Audit • Monitoring • Metrics   │
+            │ IL4/IL5 Reporting Pipelines    │
+            └────────────────────────────────┘
 ```
 
 ### Security Controls
