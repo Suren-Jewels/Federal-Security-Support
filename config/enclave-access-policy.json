@@ -1,0 +1,19 @@
+{
+  "enclaveLevels": ["IL4", "IL5"],
+  "accessRules": {
+    "IL4": {
+      "requiresMFA": true,
+      "requiresPosture": true,
+      "allowedRoles": ["IL4-Operator", "Security-Engineer"]
+    },
+    "IL5": {
+      "requiresMFA": true,
+      "requiresPosture": true,
+      "allowedRoles": ["IL5-Operator", "Security-Engineer"]
+    }
+  },
+  "networkControls": {
+    "gateway": "federal-enclave-gateway",
+    "zeroTrustEnforced": true
+  }
+}
