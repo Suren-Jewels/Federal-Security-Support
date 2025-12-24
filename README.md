@@ -69,7 +69,7 @@ This project demonstrates hands-on experience with **federal-grade security cont
 </tbody>
 </table>
 
-───────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────
 
 ## 🧠 System Summary
 
@@ -83,7 +83,7 @@ This work ensures that only **trusted users on compliant endpoints** can access 
 
 By resolving access failures, validating compliance, and supporting secure weekend operations, this system helps maintain **uninterrupted mission readiness** across high-assurance federal environments.
 
-───────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────
 
 ## 🧩 Architecture Overview (Sanitized)
 ```
@@ -136,7 +136,7 @@ By resolving access failures, validating compliance, and supporting secure weeke
 | 📡 Integration & Workflow Metrics | Validate cross‑system communication in controlled networks | API success rates, MID Server job health, workflow execution times |
 | 📊 Audit & Operational Metrics | Support audit readiness and mission‑critical operations | Authentication logs, access anomalies, weekend support validation results |
 
-───────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────
 
 ## 🔐 Authentication Workflow (Federal)
 
@@ -177,7 +177,7 @@ By resolving access failures, validating compliance, and supporting secure weeke
 | 📊 Audit / Logging Gaps | Missing authentication logs or incomplete traces | Validate log forwarding, SIEM ingestion, and audit policy configuration |
 | 🖥️ VDI Session Issues | Session drops, cannot launch, posture mismatch | Re-check endpoint compliance, validate VDI broker policies, restart secure tunnel |
 
-───────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────
 
 ## 🚀 Deployment Workflow
 
@@ -251,7 +251,7 @@ By resolving access failures, validating compliance, and supporting secure weeke
 | 📊 Audit & Traceability Requirements | Federal audits required complete visibility into authentication, access, and identity events | Enhanced logging, standardized troubleshooting playbooks, and improved audit readiness |
 | 🖥️ Endpoint & VDI Constraints | Federal endpoints and virtual desktops had strict configuration baselines that impacted MFA and SSO behavior | Developed reliable troubleshooting workflows and validated configurations across controlled device profiles |
 
-───────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────
 
 ## 🗂️ Repository Structure
 
@@ -293,7 +293,7 @@ Federal-Security-Support/
 | **IL4 Weekend Support Log** | Audit log analysis query (sanitized) | [View](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/scripts/il4_weekend_support_log.sql) |
 | **Architecture Diagram** | Color-coded IL4/IL5 visual | `Color-coded_IL4-IL5.png` |
 
-───────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────
 
 ## 🔒 Confidentiality Notice
 
@@ -317,4 +317,4 @@ Senior Cloud Engineer | Infrastructure & Security Specialist
 
 *For inquiries about this project or collaboration opportunities, please reach out via LinkedIn.*
 
-───────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────
