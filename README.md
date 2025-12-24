@@ -116,7 +116,7 @@ By resolving access failures, validating compliance, and supporting secure weeke
 
 ![IL4/IL5 Secure Access](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/Color-coded_IL4-IL5.png?raw=true)
 
-## 🧩 Architecture Layers (Federal)
+## 🧩 Architecture Layers
 
 | Layer | Components | Function |
 |-------|------------|----------|
@@ -125,7 +125,7 @@ By resolving access failures, validating compliance, and supporting secure weeke
 | 🖥️ Endpoint & Platform Layer | VDI, ServiceNow, Windows | Delivers secure workstations and enterprise platforms within controlled enclaves |
 | 📊 Audit & Compliance Layer | Logging, Monitoring | Ensures traceability, audit readiness, and continuous compliance reporting |
 
-## 📊 Metrics Analyzed (Federal)
+## 📊 Metrics Analyzed
 
 | Metric Category | Purpose | Examples |
 |-----------------|----------|----------|
