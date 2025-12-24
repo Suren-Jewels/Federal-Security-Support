@@ -83,38 +83,6 @@ This work ensures that only **trusted users on compliant endpoints** can access 
 
 By resolving access failures, validating compliance, and supporting secure weekend operations, this system helps maintain **uninterrupted mission readiness** across high-assurance federal environments.
 
-────────────────────────────────────────────────────────────────────────
-
-## 🧩 Architecture Overview (Sanitized)
-```
-+-----------------------------------------------------------+
-|                    Federal Access Layer                   |
-|       IL4 • IL5 • GCC High • NSC • Zero Trust             |
-+---------------------------+-------------------------------+
-                            |
-                            v
-                +---------------------------+
-                |   Identity & MFA Layer    |
-                |  YubiKey • SSO • RBAC     |
-                +-------------+-------------+
-                            |
-                            v
-                +---------------------------+
-                |   VDI / Cloud Systems     |
-                |  Windows • ServiceNow     |
-                +-------------+-------------+
-                            |
-                            v
-                +---------------------------+
-                |  Logging & Compliance     |
-                |  Audit • Monitoring       |
-                +---------------------------+
-```
----
-
-### 📷 Visual Architecture Diagram (PNG)
-
-![IL4/IL5 Secure Access](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/Color-coded_IL4-IL5.png?raw=true)
 
 ## 📊 Metrics Analyzed
 
