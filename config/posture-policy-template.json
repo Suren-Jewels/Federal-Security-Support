@@ -1,0 +1,14 @@
+{
+  "encryptionRequired": true,
+  "endpointProtectionRequired": true,
+  "minimumComplianceLevel": "compliant",
+  "postureChecks": {
+    "diskEncryption": "enabled",
+    "endpointProtection": "healthy",
+    "osHardening": "baseline-applied",
+    "zeroTrustSignals": {
+      "behavioralRisk": "low",
+      "sessionRisk": "low"
+    }
+  }
+}
