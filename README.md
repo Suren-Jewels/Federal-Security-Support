@@ -76,25 +76,21 @@ This work ensures uninterrupted mission readiness by validating identity, postur
 ## 🗂️ Repository Structure
 ```
 Federal-Security-Support/
-│
 ├── docs/
 │   ├── deployment-overview.md
 │   ├── troubleshooting-guide.md
 │   ├── runbook.md
 │   └── data-dictionary.md
-│
 ├── scripts/
 │   ├── access-validation.ps1
 │   ├── posture-evaluation.ps1
 │   ├── tunnel-diagnostics.ps1
 │   ├── yubikey-compliance-check.ps1
 │   └── il4-weekend-support-log.sql
-│
 ├── config/
 │   ├── snca-config-template.json
 │   ├── posture-policy-template.json
 │   └── enclave-access-policy.json
-│
 └── Color-coded_IL4-IL5.png
 ```
 
@@ -104,22 +100,22 @@ Federal-Security-Support/
 
 ### 📐 Architecture
 
-- **`deployment-overview.md`** — End-to-end authentication + posture + enclave workflow
-- **`data-dictionary.md`** — Identity, posture, network, and audit fields
+- **[`deployment-overview.md`](docs/deployment-overview.md)** — End-to-end authentication + posture + enclave workflow  
+- **[`data-dictionary.md`](docs/data-dictionary.md)** — Identity, posture, network, and audit fields  
 
 ### 🧰 Scripts
 
-- **`access-validation.ps1`** — SNCA + MFA + RBAC validation
-- **`posture-evaluation.ps1`** — Zero Trust posture checks
-- **`tunnel-diagnostics.ps1`** — Tunnel + gateway diagnostics
-- **`yubikey-compliance-check.ps1`** — MFA compliance validation
-- **`il4-weekend-support-log.sql`** — IL4 audit log analysis
+- **[`access-validation.ps1`](scripts/access-validation.ps1)** — SNCA + MFA + RBAC validation  
+- **[`posture-evaluation.ps1`](scripts/posture-evaluation.ps1)** — Zero Trust posture checks  
+- **[`tunnel-diagnostics.ps1`](scripts/tunnel-diagnostics.ps1)** — Tunnel + gateway diagnostics  
+- **[`yubikey-compliance-check.ps1`](scripts/yubikey-compliance-check.ps1)** — MFA compliance validation  
+- **[`il4-weekend-support-log.sql`](scripts/il4-weekend-support-log.sql)** — IL4 audit log analysis  
 
 ### ⚙️ Configuration
 
-- **`snca-config-template.json`** — Identity routing template
-- **`posture-policy-template.json`** — Compliance baseline template
-- **`enclave-access-policy.json`** — IL4/IL5 access rules
+- **[`snca-config-template.json`](config/snca-config-template.json)** — Identity routing template  
+- **[`posture-policy-template.json`](config/posture-policy-template.json)** — Compliance baseline template  
+- **[`enclave-access-policy.json`](config/enclave-access-policy.json)** — IL4/IL5 access rules  
 
 ---
 
