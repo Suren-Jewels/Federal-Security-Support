@@ -76,6 +76,11 @@ This work ensures uninterrupted mission readiness by validating identity, postur
 ## 🗂️ Repository Structure
 ```
 Federal-Security-Support/
+├── architecture/
+│   ├── architecture-summary.md
+│   ├── architecture-diagram.md
+│   ├── architecture-layers.md
+|   └── Federal_Zero_Trust_Access_Architecture.png
 ├── docs/
 │   ├── deployment-overview.md
 │   ├── troubleshooting-guide.md
@@ -99,23 +104,31 @@ Federal-Security-Support/
 ## 📋 Key Files
 
 ### 📐 Architecture
+- **[`architecture-summary.md`](architecture/architecture-summary.md)**
+- **[`architecture-diagram.md`](architecture/architecture-diagram.md)**
+- **[`architecture-layers.md`](architecture/architecture-layers.md)**
+- **[`Federal_Zero_Trust_Access_Architecture.png`](architecture/Federal_Zero_Trust_Access_Architecture.png)**
 
-- **[`deployment-overview.md`](docs/deployment-overview.md)** — End-to-end authentication + posture + enclave workflow  
-- **[`data-dictionary.md`](docs/data-dictionary.md)** — Identity, posture, network, and audit fields  
+### 📄 Documentation
+- **[`deployment-overview.md`](docs/deployment-overview.md)**
+- **[`troubleshooting-guide.md`](docs/troubleshooting-guide.md)**
+- **[`runbook.md`](docs/runbook.md)**
+- **[`data-dictionary.md`](docs/data-dictionary.md)**
 
 ### 🧰 Scripts
-
-- **[`access-validation.ps1`](scripts/access-validation.ps1)** — SNCA + MFA + RBAC validation  
-- **[`posture-evaluation.ps1`](scripts/posture-evaluation.ps1)** — Zero Trust posture checks  
-- **[`tunnel-diagnostics.ps1`](scripts/tunnel-diagnostics.ps1)** — Tunnel + gateway diagnostics  
-- **[`yubikey-compliance-check.ps1`](scripts/yubikey-compliance-check.ps1)** — MFA compliance validation  
-- **[`il4-weekend-support-log.sql`](scripts/il4-weekend-support-log.sql)** — IL4 audit log analysis  
+- **[`access-validation.ps1`](scripts/access-validation.ps1)**
+- **[`posture-evaluation.ps1`](scripts/posture-evaluation.ps1)**
+- **[`tunnel-diagnostics.ps1`](scripts/tunnel-diagnostics.ps1)**
+- **[`yubikey-compliance-check.ps1`](scripts/yubikey-compliance-check.ps1)**
+- **[`il4-weekend-support-log.sql`](scripts/il4-weekend-support-log.sql)**
 
 ### ⚙️ Configuration
+- **[`snca-config-template.json`](config/snca-config-template.json)**
+- **[`posture-policy-template.json`](config/posture-policy-template.json)**
+- **[`enclave-access-policy.json`](config/enclave-access-policy.json)**
 
-- **[`snca-config-template.json`](config/snca-config-template.json)** — Identity routing template  
-- **[`posture-policy-template.json`](config/posture-policy-template.json)** — Compliance baseline template  
-- **[`enclave-access-policy.json`](config/enclave-access-policy.json)** — IL4/IL5 access rules  
+### 📘 Root Files
+- **[`README.md`](README.md)**
 
 ---
 
