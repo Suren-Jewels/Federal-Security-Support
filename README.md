@@ -12,13 +12,12 @@ This repository showcases engineering work performed in **federal IL4/IL5 and GC
 
 ## ⚡ Quick Start
 
-This repository contains three core areas:
+This repository contains four core areas:
 
-- **📁 `/docs`** — Architecture, deployment workflows, troubleshooting, and data dictionary
-- **📜 `/scripts`** — SNCA routing validation, posture evaluation, tunnel diagnostics, MFA compliance, and audit SQL
-- **⚙️ `/config`** — Sanitized templates for SNCA routing, posture policy, and enclave access rules
-
-Use this repository as a reference for understanding how Zero Trust, MFA, posture validation, and enclave segmentation operate in IL4/IL5 environments.
+- **📁 [`/docs`](docs/)** — Architecture, deployment workflows, troubleshooting, and data dictionary  
+- **📜 [`/scripts`](scripts/)** — SNCA routing validation, posture evaluation, tunnel diagnostics, MFA compliance, and audit SQL  
+- **⚙️ [`/config`](config/)** — Sanitized templates for SNCA routing, posture policy, and enclave access rules  
+- **🏗️ [`/architecture`](architecture/)** — Zero Trust diagrams, enclave routing layers, and identity flow breakdowns  
 
 ---
 
