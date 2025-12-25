@@ -1,279 +1,187 @@
-# 🛡️ Federal Security Support  
-**IL4/IL5 • GCC/NSC • Zero Trust • YubiKey • Compliance Engineering**
+# 🛡️ Federal Security Support
 
-## 📌 Overview
+**Zero Trust • IL4/IL5 • SNCA • YubiKey PIV • Enclave Access Engineering**
 
-This repository documents engineering work supporting **federal security environments**, including IL4/IL5 workloads, GCC/NSC tenants, and Zero Trust authentication systems.
+---
 
-The work focused on secure access, identity enforcement, endpoint hardening, and compliance-aligned operational support across mission-critical environments.
+## ✨ Overview
 
-This project demonstrates hands-on experience with **federal-grade security controls**, identity systems, and high-assurance operational workflows.
+This repository showcases engineering work performed in **federal IL4/IL5 and GCC/NSC environments**, focusing on secure access, identity enforcement, endpoint compliance, and Zero Trust authentication workflows. All content is fully sanitized and demonstrates the architecture, automation, and troubleshooting patterns used to support high-assurance federal systems.
+
+---
+
+## ⚡ Quick Start
+
+This repository contains three core areas:
+
+- **📁 `/docs`** — Architecture, deployment workflows, troubleshooting, and data dictionary
+- **📜 `/scripts`** — SNCA routing validation, posture evaluation, tunnel diagnostics, MFA compliance, and audit SQL
+- **⚙️ `/config`** — Sanitized templates for SNCA routing, posture policy, and enclave access rules
+
+Use this repository as a reference for understanding how Zero Trust, MFA, posture validation, and enclave segmentation operate in IL4/IL5 environments.
+
+---
+
+## 🧾 System Summary
+
+This system secures access to IL4/IL5 and GCC/NSC federal environments by enforcing:
+
+- **Hardware-backed MFA** (YubiKey PIV)
+- **Device posture validation** (encryption, endpoint protection, compliance)
+- **Zero Trust continuous verification**
+- **SNCA v2/v3/legacy identity routing**
+- **IL4/IL5 enclave segmentation**
+- **Secure tunnels** (Zscaler, GlobalProtect)
+- **Full audit logging and compliance monitoring**
+
+Only **trusted users on compliant endpoints** can reach isolated federal enclaves. All authentication, posture, and access events are logged to maintain audit readiness.
+
+---
+
+## 💡 Why This Work Matters
+
+Federal IL4/IL5 environments require high-assurance identity verification, strict device compliance, continuous Zero Trust monitoring, controlled enclave segmentation, and immutable audit trails.
+
+This work ensures uninterrupted mission readiness by validating identity, posture, and access across secure enclaves—supporting operations where reliability and compliance are non-negotiable.
+
+---
 
 ## 🎯 Responsibilities & Scope
 
 - Supported IL4/IL5 and GCC/NSC environments with strict compliance requirements
-- Implemented and maintained YubiKey-based MFA for secure access
-- Hardened endpoints and enforced Zero Trust authentication workflows
+- Implemented and maintained **YubiKey PIV MFA**
+- Hardened endpoints and enforced Zero Trust posture policies
 - Troubleshot secure access failures across VDI, ServiceNow, and cloud systems
-- Ensured alignment with federal security baselines and operational policies
-- Collaborated with security, IAM, and compliance teams to maintain audit readiness
+- Ensured alignment with federal baselines and enclave segmentation rules
+- Collaborated with IAM, security, and compliance teams to maintain audit readiness
 
-## 🛠️ Tools & Technologies
+---
 
-### **Security Stack**
+## 🛠️ Technologies & Tools
 
-<table>
-<thead>
-<tr>
-<th>Category</th>
-<th>Technologies</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>🔑 Authentication</strong></td>
-<td>YubiKey (FIDO2, PIV, OTP)</td>
-<td>Hardware-based multi-factor authentication</td>
-</tr>
-<tr>
-<td><strong>🏛️ Federal Environments</strong></td>
-<td>GCC High<br>GCC<br>NSC</td>
-<td>Compliance-aligned cloud tenants</td>
-</tr>
-<tr>
-<td><strong>🖥️ Platforms</strong></td>
-<td>Windows Server<br>VDI</td>
-<td>Secure endpoint infrastructure</td>
-</tr>
-<tr>
-<td><strong>🔐 Identity & Access</strong></td>
-<td>MFA<br>RBAC<br>SSO</td>
-<td>Identity enforcement and access control</td>
-</tr>
-<tr>
-<td><strong>⚙️ Automation</strong></td>
-<td>PowerShell</td>
-<td>Security automation and troubleshooting</td>
-</tr>
-<tr>
-<td><strong>📊 Security & Monitoring</strong></td>
-<td>Secure logging<br>Monitoring tools</td>
-<td>Audit trails and security visibility</td>
-</tr>
-<tr>
-<td><strong>📋 Compliance</strong></td>
-<td>IL4/IL5<br>Zero Trust frameworks</td>
-<td>Federal security baselines</td>
-</tr>
-</tbody>
-</table>
+### Platform Stack
 
-────────────────────────────────────────────────────────────────────────
+| Category | Technologies | Purpose |
+|----------|--------------|---------|
+| 🔑 **Authentication** | YubiKey PIV, SNCA v2/v3/legacy | High-assurance MFA + identity routing |
+| 🏛️ **Federal Environments** | IL4, IL5, GCC High, NSC | Segmented, compliance-aligned tenants |
+| 🖥️ **Endpoints** | Windows, VDI | Secure workstation and virtual desktop access |
+| 🔐 **Identity & Access** | MFA, RBAC, SSO | Access control and identity enforcement |
+| ⚙️ **Automation** | PowerShell | Access validation, posture checks, diagnostics |
+| 📊 **Monitoring** | Audit logs, SIEM | Compliance visibility and traceability |
+| 📋 **Compliance** | Zero Trust, IL4/IL5 baselines | Federal security alignment |
 
-## 🧠 System Summary
-
-This system secures access to IL4/IL5 and GCC/NSC federal environments by enforcing device compliance, hardware‑based MFA, privileged access controls, and continuous monitoring. Through Intune/Jamf enrollment, YubiKey authentication, Zero Trust policy enforcement, and secure gateways such as Zscaler, GlobalProtect, and Citrix, only verified users on compliant endpoints can reach isolated federal enclaves. All access events are logged and monitored to maintain audit readiness and alignment with federal security baselines.
-
-## ⭐ Why This Work Matters
-
-Federal IL4/IL5 environments require strict identity assurance, device compliance, and continuous monitoring to protect mission-critical systems. 
-
-This work ensures that only **trusted users on compliant endpoints** can access sensitive workloads, reducing operational risk and strengthening **Zero Trust enforcement**. 
-
-By resolving access failures, validating compliance, and supporting secure weekend operations, this system helps maintain **uninterrupted mission readiness** across high-assurance federal environments.
-
-
-## 📊 Metrics Analyzed
-
-| Metric Category | Purpose | Examples |
-|-----------------|----------|----------|
-| 🛡️ Compliance & Posture Metrics | Validate IL4/IL5, FedRAMP, and Zero Trust alignment across identity and endpoints | Device compliance state, MFA assurance level, posture evaluation results |
-| 🔐 Identity & Access Metrics | Ensure strong authentication and correct RBAC mappings in restricted environments | Failed MFA attempts, SSO attribute mismatches, privileged access events |
-| 🖥️ Endpoint & VDI Health | Confirm stability and readiness of federal workstations and virtual desktops | VDI session failures, endpoint hardening status, configuration drift |
-| 🌐 Network & Enclave Connectivity | Monitor secure routing and enclave access reliability | Zscaler/GlobalProtect tunnel health, enclave reachability, packet loss |
-| 📡 Integration & Workflow Metrics | Validate cross‑system communication in controlled networks | API success rates, MID Server job health, workflow execution times |
-| 📊 Audit & Operational Metrics | Support audit readiness and mission‑critical operations | Authentication logs, access anomalies, weekend support validation results |
-
-────────────────────────────────────────────────────────────────────────
-
-## 🔐 Authentication Workflow (Federal)
-
-| Step | Action | Purpose |
-|------|--------|----------|
-| 1 | User authenticates through IL4/IL5‑approved IdP with MFA (YubiKey, PIV, CAC) | Ensures identity assurance meets federal access requirements |
-| 2 | Identity attributes and RBAC mappings are validated against enclave policies | Confirms least‑privilege access and correct group membership |
-| 3 | Device posture is evaluated via Intune/Jamf and Zero Trust checks | Ensures endpoint compliance before granting enclave access |
-| 4 | Secure network tunnel established via Zscaler or GlobalProtect | Provides encrypted, policy‑controlled access to restricted systems |
-| 5 | Access to VDI, ServiceNow, or cloud systems is granted based on role and posture | Enforces Zero Trust and IL4/IL5 segmentation rules |
-| 6 | Authentication and access events are logged to federal‑aligned audit systems | Supports traceability, compliance, and incident response |
-| 7 | Continuous session monitoring evaluates anomalies and posture drift | Maintains operational security during active sessions |
-
-•••••••••••••••
-
-## 🔐 Security Workflow Overview
-
-| Step | Action | Security Layer |
-|------|--------|----------------|
-| **1** | Validate user identity and MFA token (YubiKey) | 🔑 Authentication |
-| **2** | Authenticate through GCC/NSC or IL4/IL5-compliant access layers | 🏛️ Federal Gateway |
-| **3** | Enforce RBAC and Zero Trust policies | 🔒 Policy Engine |
-| **4** | Log and monitor authentication events | 📊 Audit Layer |
-| **5** | Troubleshoot failures across VDI, ServiceNow, and cloud endpoints | 🔧 Support Operations |
-| **6** | Document findings and escalate to security engineering when required | 📝 Incident Management |
-
-•••••••••••••••
-
-## 🔧 Common Troubleshooting Scenarios (Federal)
-
-| Issue Type | Symptoms | Resolution |
-|------------|----------|------------|
-| 🔐 MFA / YubiKey Failures | Token not recognized, MFA loop, PIV/CAC mismatch | Validate drivers, check IdP logs, confirm certificate mappings |
-| 🛡️ Device Compliance Issues | IL4/IL5 posture check fails, device marked non‑compliant | Re-sync Intune/Jamf, validate hardening baselines, re-run posture evaluation |
-| 🌐 Enclave Connectivity Problems | Cannot reach VDI, ServiceNow, or cloud systems | Check Zscaler/GlobalProtect tunnel, routing, and enclave firewall rules |
-| 🔑 RBAC / Privileged Access Errors | Access denied despite correct MFA | Validate role assignments, PAM token status, and group propagation |
-| 📡 Integration Failures | API calls blocked, MID Server unreachable | Confirm enclave routing, certificate trust, and integration credentials |
-| 📊 Audit / Logging Gaps | Missing authentication logs or incomplete traces | Validate log forwarding, SIEM ingestion, and audit policy configuration |
-| 🖥️ VDI Session Issues | Session drops, cannot launch, posture mismatch | Re-check endpoint compliance, validate VDI broker policies, restart secure tunnel |
-
-────────────────────────────────────────────────────────────────────────
-
-## 🚀 Deployment Workflow
-
-**Pipeline:** *[CI] → [CD] → [Prod]*
-| Step | Action | Tools Used |
-|------|--------|------------|
-| **1** | Provision Linux and Windows hosts across IL4/IL5‑aligned secure enclaves | Bash, PowerShell |
-| **2** | Apply baseline hardening (disk encryption, endpoint protection, RBAC enforcement) | Security tooling |
-| **3** | Configure network segmentation, VLANs, and controlled routing between enclaves | Network utilities |
-| **4** | Deploy authentication, posture validation, and Zero Trust access‑control modules | Automation scripts |
-| **5** | Validate identity workflows and continuous verification policies | Identity & access systems |
-| **6** | Enable logging, monitoring, and compliance audit pipelines | Monitoring stack |
-| **7** | Perform end‑to‑end access validation across enclave boundaries | Test frameworks |
-
-•••••••••••••••
-
-## ✅ Key Outcomes
-
-<table>
-<thead>
-<tr>
-<th>Area</th>
-<th>Impact</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>🔒 Authentication</strong></td>
-<td>Strengthened authentication reliability across secure federal environments</td>
-</tr>
-<tr>
-<td><strong>🔧 Operations</strong></td>
-<td>Reduced access failures through structured troubleshooting workflows</td>
-</tr>
-<tr>
-<td><strong>📋 Compliance</strong></td>
-<td>Improved compliance alignment for IL4/IL5 workloads</td>
-</tr>
-<tr>
-<td><strong>🛡️ Zero Trust</strong></td>
-<td>Enhanced Zero Trust enforcement across VDI and cloud systems</td>
-</tr>
-<tr>
-<td><strong>🎯 Mission Support</strong></td>
-<td>Supported mission-critical operations requiring high-assurance identity controls</td>
-</tr>
-</tbody>
-</table>
-
-•••••••••••••••
-
-## 🚀 Key Achievements
-
-| Metric | Achievement | Impact |
-|--------|-------------|--------|
-| 🔐 Zero Trust Alignment | Implemented IL4/IL5‑aligned authentication workflows | Strengthened compliance and reduced security gaps |
-| 🛡️ Security Posture | Built enclave‑ready access and validation scripts | Improved audit readiness and reduced misconfigurations |
-| 📊 Operational Insight | Created metrics for authentication, posture, and access | Enabled proactive monitoring and compliance reporting |
-| ⚙️ Workflow Standardization | Documented repeatable federal‑aligned procedures | Improved consistency across secure environments |
-
-•••••••••••••••
-
-## 🧩 Engineering Challenges Solved (Federal)
-
-| Area | Challenge | Outcome |
-|------|-----------|---------|
-| 🛡️ Compliance & Zero Trust Requirements | Strict IL4/IL5, FedRAMP, and Zero Trust controls required precise alignment across identity, access, and endpoint posture | Standardized enforcement patterns and validated access flows that met federal compliance expectations |
-| 🔐 MFA & Identity Assurance | Hardware-backed MFA needed to function reliably across VDI, Windows, and ServiceNow under federal identity constraints | Improved token reliability, clarified identity flows, and reduced authentication-related disruptions |
-| 🧭 Access Workflow Complexity | Federal workflows required multi-step approvals, identity verification, and strict RBAC mapping | Streamlined catalog flows, reduced friction, and improved accuracy of role-based access assignments |
-| 📡 Integration Across Restricted Systems | Connecting VDI, IdP, ServiceNow, and audit systems within controlled networks introduced integration friction | Established consistent integration patterns and validated communication paths across restricted environments |
-| 📊 Audit & Traceability Requirements | Federal audits required complete visibility into authentication, access, and identity events | Enhanced logging, standardized troubleshooting playbooks, and improved audit readiness |
-| 🖥️ Endpoint & VDI Constraints | Federal endpoints and virtual desktops had strict configuration baselines that impacted MFA and SSO behavior | Developed reliable troubleshooting workflows and validated configurations across controlled device profiles |
-
-────────────────────────────────────────────────────────────────────────
+---
 
 ## 🗂️ Repository Structure
-
-A high-level map of the Federal Security Support repository:
 ```
 Federal-Security-Support/
 │
-├── doc/
-│   ├── architecture_overview.md       # Weekend support architecture (sanitized)
-│   └── confidentiality_note.md        # NDA-aligned disclaimer
+├── docs/
+│   ├── deployment-overview.md
+│   ├── troubleshooting-guide.md
+│   ├── runbook.md
+│   └── data-dictionary.md
 │
 ├── scripts/
-│   ├── il4_weekend_support_log.sql    # Audit log analysis (sanitized)
-│   └── yubikey_compliance_check.ps1   # Endpoint MFA compliance check (sanitized)
+│   ├── access-validation.ps1
+│   ├── posture-evaluation.ps1
+│   ├── tunnel-diagnostics.ps1
+│   ├── yubikey-compliance-check.ps1
+│   └── il4-weekend-support-log.sql
 │
-├── Color-coded_IL4-IL5.png            # Visual architecture diagram
-└── README.md                          # Main project documentation
+├── config/
+│   ├── snca-config-template.json
+│   ├── posture-policy-template.json
+│   └── enclave-access-policy.json
+│
+└── Color-coded_IL4-IL5.png
 ```
 
-### 📁 Directory Descriptions
+---
 
-| Directory | Purpose |
-|-----------|---------|
-| `docs/` | Architecture notes, IL4/IL5 compliance references, and enclave workflow documentation |
-| `scripts/` | Troubleshooting utilities, posture validation scripts, and secure access diagnostics |
-| `runbooks/` | Federal-aligned operational procedures, escalation paths, and audit-ready workflows |
-| `configs/` | Sanitized configuration examples for VDI, identity, and Zero Trust components |
-| `reports/` | Compliance summaries, posture evaluation results, and operational health insights |
+## 📋 Key Files
 
-•••••••••••••••
+### 📐 Architecture
 
-## 📁 Key Files & Resources
+- **`deployment-overview.md`** — End-to-end authentication + posture + enclave workflow
+- **`data-dictionary.md`** — Identity, posture, network, and audit fields
 
-| File | Description | Link |
-|------|-------------|------|
-| **Architecture Overview** | Weekend support architecture (sanitized) | [View](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/doc/architecture_overview.md) |
-| **Confidentiality Note** | NDA-aligned disclaimer | [View](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/doc/confidentiality_note.md) |
-| **YubiKey Compliance Check** | Endpoint MFA compliance validation script | [View](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/scripts/yubikey_compliance_check.ps1) |
-| **IL4 Weekend Support Log** | Audit log analysis query (sanitized) | [View](https://github.com/Suren-Jewels/Federal-Security-Support/blob/main/scripts/il4_weekend_support_log.sql) |
-| **Architecture Diagram** | Color-coded IL4/IL5 visual | `Color-coded_IL4-IL5.png` |
+### 🧰 Scripts
 
-────────────────────────────────────────────────────────────────────────
+- **`access-validation.ps1`** — SNCA + MFA + RBAC validation
+- **`posture-evaluation.ps1`** — Zero Trust posture checks
+- **`tunnel-diagnostics.ps1`** — Tunnel + gateway diagnostics
+- **`yubikey-compliance-check.ps1`** — MFA compliance validation
+- **`il4-weekend-support-log.sql`** — IL4 audit log analysis
+
+### ⚙️ Configuration
+
+- **`snca-config-template.json`** — Identity routing template
+- **`posture-policy-template.json`** — Compliance baseline template
+- **`enclave-access-policy.json`** — IL4/IL5 access rules
+
+---
+
+## 🚀 Deployment Workflow
+
+1. Configure SNCA v2/v3/legacy routing
+2. Enforce YubiKey PIV MFA
+3. Validate device posture (encryption, endpoint protection, compliance)
+4. Establish secure tunnels (Zscaler / GlobalProtect)
+5. Apply IL4/IL5 enclave segmentation
+6. Validate Zero Trust continuous verification
+7. Enable audit logging and compliance pipelines
+
+---
+
+## ✅ Key Outcomes
+
+- Strengthened authentication reliability across IL4/IL5 environments
+- Reduced access failures through structured troubleshooting workflows
+- Improved compliance alignment with federal baselines
+- Enhanced Zero Trust enforcement across VDI and cloud systems
+- Supported mission-critical operations requiring high-assurance identity controls
+
+---
+
+## 🔧 Engineering Challenges Solved
+
+- Eliminated MFA loops and SNCA routing mismatches
+- Resolved posture drift and non-compliant endpoint states
+- Stabilized VDI access across segmented enclaves
+- Improved audit traceability for weekend support operations
+- Reduced tunnel instability and enclave reachability failures
+
+---
+
+## 🔐 Security & Access Controls
+
+This system enforces:
+
+- Hardware-backed MFA (YubiKey PIV)
+- Device compliance (Intune/Jamf)
+- Zero Trust posture evaluation
+- SNCA identity routing
+- IL4/IL5 enclave segmentation
+- Continuous session monitoring
+- Immutable audit logging
+
+---
 
 ## 🔒 Confidentiality Notice
 
-All content is fully sanitized.
+All content is fully sanitized. No internal federal data, proprietary configurations, or sensitive operational details are included. Only high-level engineering patterns and workflows are represented.
 
-No internal federal data, proprietary configurations, or sensitive operational details are included.
+---
 
-Only high-level engineering concepts and workflows are described.
-
-## 📄 License
-
-This repository contains fully sanitized, non‑sensitive documentation and workflow patterns aligned to federal IL4/IL5, Zero Trust, and enclave operations.  
-All content is provided strictly for educational and portfolio demonstration purposes.
-
-No proprietary configurations, internal architectures, or confidential operational details are included.
-
-## 👔 Professional Context
+## 👔 Professional Context  
 
 **Suren Jewels**  
-Senior Cloud Engineer | Infrastructure & Security Specialist
+Cloud & Infrastructure Engineer • Security & Automation Specialist  
 
-*For inquiries about this project or collaboration opportunities, please reach out via LinkedIn.*
+This repository showcases sanitized engineering patterns and automation workflows used in enterprise ServiceNow environments.
 
-────────────────────────────────────────────────────────────────────────
+- **LinkedIn:** [https://www.linkedin.com/in/suren-jewels/](https://www.linkedin.com/in/suren-jewels/)
+- **GitHub:** [https://github.com/Suren-Jewels](https://github.com/Suren-Jewels)
+- **Email:** [SurenJewelsPro@gmail.com](mailto:SurenJewelsPro@gmail.com)
